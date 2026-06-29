@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heding workshop</title>
+</head>
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 10;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(208, 250, 240);
+            line-height: 1.5;
+        }
+
+        header {
+            background: linear-gradient(90deg, rgb(1, 140, 255), rgb(114, 237, 253));
+            padding: 30px;
+            color: white;
+            text-align: center;
+            box-shadow: 0 4px 8px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .text-title {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .card {
+            background-color:rgb(254, 255, 255);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px black;
+            padding: 20px 20px;
+            margin-bottom: 10px;
+        }
+
+        pre {
+            background-color:rgb(255, 204, 204);
+            padding:10px;
+            border-radius:5px;
+            border-top: 5px solid rgb(100, 97, 97);
+            border-bottom: 5px solid rgb(2, 1, 1);
+        }
+
+        .note {
+            border-left: 4px solid rgb(243, 146, 243);
+            background-color: rgb(234, 220, 241);
+        }
+
+                .note::before {
+                    content:"💩";
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            padding: 50px 0;
+        }
+
+        .hero-text-h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+            color:rgb(43, 43, 122);
+        }
+        .hero-text-p {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color:rgb(84, 84, 94);
+        }
+
+        .h1-label {background: blue}
+        .h2-label {background: rgb(95, 95, 202)}
+        
+    </style>
+<body>
+    <header>
+        <p class="text-title">เรียนรู้เว็บเบื้องต้น</p>
+        <nav>
+            <a href="index.html">Home</a>
+        </nav>
+    </header>
+
+
+    
+    <div class="container">
+    <section class="hero">
+        <h1 class="hero-text-h1">แบบฝึกปฏิบัติ HTML Heading</h1>
+        <p class="hero-text-p">ฝึกใช้แท็ก &lt;h1> - &lt;h6> และการปรับขนาดหัวข้อด้วย CSS</p>
+    </section>
+    <div class="card">
+        <h2>1. ความหมายของ Headings (H1–H6)</h2>
+        <p>HTML มีหัวข้อทั้งหมด 6 ระดับ</p>
+        <ul>
+            
+            <li><span class="h1-label">H1</span> – หัวข้อใหญ่สุด ใช้สำหรับชื่อหน้าเว็บหรือหัวข้อหลัก</li>
+            <li>H2 – หัวข้อรอง แบ่ง Section ของเนื้อหา</li>
+            <li>H3 – หัวข้อย่อยภายใน H2</li>
+            <li>H4 – ย่อยลงไปอีกระดับ</li>
+            <li>H5 – ใช้น้อย แต่เน้นลำดับข้อมูล</li>
+            <li>H6 – เล็กสุด ใช้กับหัวข้อระดับลึก</li>
+        </ul>
+        <p class="note">💡H1 ควรมีเพียง 1 อันในแต่ละหน้า เพื่อช่วย SEO และโครงสร้างเอกสาร</p>
+    </div>
+</div>
+
+
+    <div class="container">
+        <div class="card">
+            <h2>2.ตัวอยา่งการใช ้H1–H6</h2>
+            <pre>t;h1&gt;Welcome to My Website&lt;/h1&gt;
+                &lt;h2&gt;HTML Basics&lt;/h2&gt;
+                &lt;h3&gt;What is HTML?&lt;/h3&gt;
+                &lt;h4&gt;HTML Syntax&lt;/h4&gt;
+                &lt;h5&gt;Example Code&lt;/h5&gt;
+                &lt;h6&gt;Note: Case Sensitive&lt;/h6&gt;</pre>
+                    <P class="note">เมื่อแสดงผลจะได้ลดหลั่นแบบนี้</P>
+    <h1>H1:Welcome to My Website</h1>
+    <h2>H2:HTML Basics</h2>
+    <h3>H3:What is HTML?</h3>
+    <h4>H4:HTML Syntax</h4>
+    <h5>H5:Example Code</h5>
+    <h6>H6:Note: Case Sensitive</h6>
+        </div>
+    </div>
+
+
+
+    <P class="text-center"><a href="index.html">🏠Back to Home</a>    </p>
+    
+</body>
+</html>
