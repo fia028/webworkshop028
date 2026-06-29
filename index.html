@@ -6,11 +6,14 @@
     <meta name="description" content="HTML Tutorial - Learn HTML basics including structure, tags, links, lists, images, tables, forms and more.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
+            margin: 30px;
             line-height: 1.6;
-            color: #333;
+            background-color: #fffefb;
         }
 
         h1 {
@@ -32,14 +35,20 @@
 
         a:hover {
             text-decoration: underline;
+            color: aqua;
+        }
+            .text-center {
+                text-align: center;
         }
 
         pre {
             background-color: bisque;
             padding-top: 10px;
             border-left: 3px solid rgb(0, 60, 255);
-            font-size: 16;
-        }
+            font-size: 16px;
+            white-space: pre-wrap;
+            border-radius: 10px;
+}
 
         footer {
             background-color: black;
@@ -49,15 +58,9 @@
             color: #be4444;
         }
 
-        section {
-            border: 2px solid #ffffff;
-            padding: 15px 20px;
-            margin-bottom: 10px;
-        }
     </style>
 </head>
 <body>
-
 <h1 id="top">HTML Tutorial</h1>
 <p>Welcome to the HTML tutorial. Click on the topics below to start learning:</p>
 
@@ -73,7 +76,6 @@
     <li><a href="#adding-images">Adding Images</a></li>
     <li><a href="#creating-tables">Creating Tables</a></li>
     <li><a href="#html-forms">HTML Forms</a></li>
-    <li><a href="#multimedia">Embedding Multimedia (Audio &amp; Video)</a></li>
     <li><a href="#semantic">Semantic HTML</a></li>
     <li><a href="#workshop">Workshop</a></li>
 </ul>
@@ -81,7 +83,6 @@
 <hr>
 
 <!-- Introduction to HTML -->
-<section>
     <h2 id="introduction">Introduction to HTML</h2>
     <pre>
     - HTML stands for Hyper Text Markup Language
@@ -95,14 +96,12 @@
     - HTML can embed programs written in a scripting language such as JavaScript, which affects the behavior and content of web pages
     - HTML is not a programming language, but a markup language
     </pre>
-    <a href="#top">TOP</a>
-</section>
-
+    <a href="#top">back to top</a>
 <hr>
 
 <!-- HTML Document Structure -->
-<section>
     <h2 id="document-structure">HTML Document Structure</h2>
+    <p>workshop</p>
     <p>An HTML document has the following basic structure...</p>
     <pre>
         คำอธิบาย:
@@ -120,15 +119,12 @@
         ตัวอย่าง: &lt;h1&gt;Hello, World!&lt;/h1&gt;
                 &lt;img src="image.jpg" alt="A description of the image"&gt;
     </pre>
-    <a href="#top">TOP</a>
-</section>
-
+    <a href="#top">back to top</a>
 <hr>
 
 <!-- Heading -->
-<section>
     <h2 id="heading">Heading</h2>
-    <p>workshop</p>
+    <p><a href="W03-Heading.html">workshop</a></p>
     <p>HTML headings are defined with the &lt;h1&gt; to &lt;h6&gt; tags...</p>
     <pre>
     - &lt;h1&gt;: Heading 1
@@ -138,8 +134,7 @@
     - &lt;h5&gt;: Heading 5
     - &lt;h6&gt;: Heading 6
     </pre>
-    <a href="#top">TOP</a>
-</section>
+    <a href="#top">back to top</a>
 
 <hr>
 
@@ -151,13 +146,12 @@
     <pre>
     - &lt;p&gt;: Paragraph
     </pre>
-    <a href="#top">TOP</a>
+    <a href="#top">back to top</a>
 </section>
 
 <hr>
 
 <!-- Text Formatting -->
-<section>
     <h2 id="text-formatting">Text Formatting</h2>
     <p>workshop</p>
     <p>HTML provides various elements to format text...</p>
@@ -184,13 +178,11 @@
     - &lt;q&gt;: Inline quotation
     - &lt;code&gt;: Code snippet
     </pre>
-    <a href="#top">TOP</a>
-</section>
+    <a href="#top">back to top</a>
 
 <hr>
 
 <!-- Creating Links -->
-<section>
     <h2 id="creating-links">Creating Links</h2>
     <p>workshop</p>
     <p>HTML links are defined with the &lt;a&gt; tag...</p>
@@ -215,13 +207,11 @@
             - Use the download attribute to create a download link
             - Example: &lt;a href="file.txt" download&gt;Download Text File&lt;/a&gt;
     </pre>
-    <a href="#top">TOP</a>
-</section>
+    <a href="#top">back to top</a>
 
 <hr>
 
 <!-- Lists -->
-<section>
     <h2 id="lists">Lists (Ordered and Unordered)</h2>
     <p>workshop</p>
     <p>HTML lists are defined with the &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; tags...</p>
@@ -266,13 +256,11 @@
         - Example: &lt;ol style="list-style-type: upper-roman;"&gt;
         - Example: &lt;ol style="list-style-type: lower-roman;"&gt;
     </pre>
-    <a href="#top">TOP</a>
-</section>
+    <a href="#top">back to top</a>
 
 <hr>
 
 <!-- Adding Images -->
-<section>
     <h2 id="adding-images">Adding Images</h2>
     <p>workshop</p>
     <p>HTML images are defined with the &lt;img&gt; tag...</p>
@@ -316,13 +304,11 @@
                     object-fit: cover;
                 }
     </pre>
-    <a href="#top">TOP</a>
-</section>
+    <a href="#top">back to top</a>
 
 <hr>
 
 <!-- Creating Tables -->
-<section>
     <h2 id="creating-tables">Creating Tables</h2>
     <p><a href="#">Workshop 1</a> <a href="#">Workshop 2</a></p>
     <p>HTML tables are defined with the &lt;table&gt;, &lt;tr&gt;, &lt;th&gt;, and &lt;td&gt; tags...</p>
@@ -332,13 +318,11 @@
         - &lt;th&gt;: Table header
         - &lt;td&gt;: Table data/cell
     </pre>
-    <a href="#top">TOP</a>
-</section>
+    <a href="#top">back to top</a>
 
 <hr>
 
 <!-- HTML Forms -->
-<section>
     <h2 id="html-forms">HTML Forms</h2>
     <p><a href="#">Workshop 1</a> <a href="#">Workshop 2</a></p>
     <p>HTML forms are defined with the &lt;form&gt; tag...</p>
@@ -381,35 +365,14 @@
             - การส่งข้อมูลไปยังเซิร์ฟเวอร์
             - การใช้ JavaScript (เช่น onsubmit)
     </pre>
-    <a href="#top">TOP</a>
-</section>
-
-<hr>
-
-<!-- Embedding Multimedia -->
-<section>
-    <h2 id="multimedia">Embedding Multimedia (Audio &amp; Video)</h2>
-    <p>workshop</p>
-    <p>HTML multimedia elements allow you to embed audio and video...</p>
-    <pre>
-        - &lt;video&gt;: Defines a video
-        - &lt;audio&gt;: Defines an audio
-        - &lt;source&gt;: Defines multiple media resources for video and audio
-        - &lt;track&gt;: Defines text tracks for video and audio
-        - Example:
-            &lt;video width="320" height="240" controls&gt;
-                &lt;source src="movie.mp4" type="video/mp4"&gt;
-            &lt;/video&gt;
-    </pre>
-    <a href="#top">TOP</a>
-</section>
+    <a href="#top">back to top</a>
 
 <hr>
 
 <!-- Semantic HTML -->
-<section>
     <h2 id="semantic">Semantic HTML</h2>
-    <p>Semantic HTML elements clearly define the content of a web page...</p>
+    <p>workshop</p>
+    <p>HTML elements clearly define the content of a web page...</p>
     <pre>
         - &lt;header&gt;: Defines a header for a document or section
         - &lt;nav&gt;: Defines navigation links
@@ -418,25 +381,24 @@
         - &lt;aside&gt;: Defines content aside from the page content
         - &lt;footer&gt;: Defines a footer for a document or section
     </pre>
-    <a href="#top">TOP</a>
-</section>
+    <a href="#top">back to top</a>
 
 <hr>
 
 <!-- My Workshop -->
-<section>
     <h2 id="workshop">My Workshop</h2>
     <ul>
-        <li><a href="#">workshop 01 : rabbit</a></li>
-        <li><a href="#">workshop 02 : Login</a></li>
+        <li><a href="">workshop 01 :....</a></li>
+        <li><a href="">workshop 01 :....</a></li>
     </ul>
-    <a href="#top">TOP</a>
+    <a href="#top">back to top</a>
     <hr>
-    <a href="https://www.w3schools.com/" target="_blank">Learn more about HTML</a>
-</section>
+    <div class="text-center">
+        <a href="https://www.w3schools.com/">Learn more about HTML</a>
+        <p >&copy; 2024 HTML Tutorial by Patchapon Raekeaw 2026</p>
+    </div>
 
 <footer>
-    <p>&copy; 2024 HTML Tutorial by Suksawat Saelim</p>
 </footer>
 
 </body>
