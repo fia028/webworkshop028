@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>formatting</title>
+    <title>HTML Formatting</title>
     <link rel="stylesheet" href="css/W04-formatting.css">
 </head>
 
 <body>
-    <!-- Header -->
     <header>
         <div class="brand">
             <div class="brand-icon">😈</div>
@@ -18,30 +17,94 @@
                 <p>Basic Web Development</p>
             </div>
         </div>
+
         <nav>
             <a href="index.html">Home</a>
             <a href="W03-02-heading-51.html">Heading</a>
-            <a href="W04-01-formatting.html">formatting</a>
-            <a href="#">Lists</a>
+            <a href="W04-01-formatting.html">Formatting</a>
+            <a href="W04-02-lists.html">Lists</a>
         </nav>
     </header>
 
-    <!-- Hero section -->
-    <div class="hero">Hero</div>
+    <!-- Hero -->
+    <section class="hero">
+        <h1>แบบฝึกปฏิบัติ: HTML Formatting</h1>
+        <p>เรียนรู้การจัดรูปแบบข้อความด้วยแท็ก HTML พร้อมด้วยตัวอย่างและการตกแต่งด้วย CSS</p>
+    </section>
 
-    <!-- Main Container -->
-    <div class="container">
-        <div class="card-grid">
-            <div class="card">card 1</div>
-            <div class="card">card 2</div>
-            <div class="card">card 3</div>
+    <!-- Main -->
+    <main>
+        <div class="container">
+
+            <div class="card-grid">
+
+                <!-- Card 1 -->
+                <div class="card">
+                    <h3>📄 ตัวอย่างผลลัพธ์</h3>
+
+                    <p><span class="label">B:</span> <b>ข้อความตัวหนา</b></p>
+                    <p><span class="label">STRONG:</span> <strong>ข้อความสำคัญ</strong></p>
+                    <p><span class="label">I:</span> <i>ข้อความตัวเอียง</i></p>
+                    <p><span class="label">EM:</span> <em>ข้อความเน้นเสียง</em></p>
+                    <p><span class="label">U:</span> <u>ข้อความขีดเส้นใต้</u></p>
+                    <p><span class="label">MARK:</span> <mark>ข้อความที่ถูกเน้น</mark></p>
+                    <p><span class="label">SMALL:</span> <small>ข้อความขนาดเล็ก</small></p>
+                    <p><span class="label">DEL:</span> <del>ข้อความที่ถูกลบ</del></p>
+                    <p><span class="label">SUP:</span> X<sup>2</sup></p>
+                    <p><span class="label">SUB:</span> H<sub>2</sub>O</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card">
+                    <h3>&lt;/&gt; ตัวอย่างโค้ด HTML</h3>
+
+<pre><code>&lt;b&gt;ข้อความตัวหนา&lt;/b&gt;
+&lt;strong&gt;ข้อความสำคัญ&lt;/strong&gt;
+&lt;i&gt;ข้อความตัวเอียง&lt;/i&gt;
+&lt;em&gt;ข้อความเน้นเสียง&lt;/em&gt;
+&lt;u&gt;ข้อความขีดเส้นใต้&lt;/u&gt;
+&lt;mark&gt;ข้อความที่ถูกเน้น&lt;/mark&gt;
+&lt;small&gt;ข้อความขนาดเล็ก&lt;/small&gt;
+&lt;del&gt;ข้อความที่ถูกลบ&lt;/del&gt;
+X&lt;sup&gt;2&lt;/sup&gt;
+H&lt;sub&gt;2&lt;/sub&gt;O
+</code></pre>
+
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card">
+                    <h3>🎯 กิจกรรมฝึกปฏิบัติ</h3>
+
+                    <p><span class="label3">✓</span> พิมพ์ข้อความสร้างหน้าเว็บ 1 หน้า</p>
+                    <p><span class="label3">✓</span> ใช้แท็ก Formatting อย่างน้อย 6 รูปแบบ</p>
+                    <p><span class="label3">✓</span> ทดลองเปรียบเทียบ &lt;b&gt; กับ &lt;strong&gt;</p>
+                    <p><span class="label3">✓</span> ทดลองเปรียบเทียบ &lt;i&gt; กับ &lt;em&gt;</p>
+                    <p><span class="label3">✓</span> ปรับสี ขนาด และพื้นหลังด้วย CSS</p>
+                    <p><span class="label3">✓</span> บันทึกไฟล์ชื่อ <span class="filename">formatting.html</span></p>
+                </div>
+
+            </div>
+
+            <div class="tip-box">
+                <h2>💡 เกร็ดความรู้</h2>
+
+                <p>
+                    แท็กจัดรูปแบบข้อความช่วยให้เนื้อหาสื่อสารชัดเจนและมีความหมายมากขึ้น เช่น
+                    <strong>&lt;strong&gt;</strong> ใช้สำหรับข้อความสำคัญ,
+                    <em>&lt;em&gt;</em> ใช้เน้นความสำคัญหรืออารมณ์ และ
+                    <mark>&lt;mark&gt;</mark> ใช้เน้นข้อความที่ต้องการให้โดดเด่น
+                    ซึ่งช่วยให้ผู้ใช้งานเข้าใจเนื้อหาได้ง่ายและเป็นระเบียบมากขึ้น
+                </p>
+            </div>
+
         </div>
+    </main>
 
-        <div class="tip-box">Tip Box</div>
-    </div>
+    <footer>
+        <p>Copyright &copy; 2026 Sukawat Saelim. All right reseveed </p>
+    </footer>
 
-    <!-- Footer -->
-    <footer>footer</footer>
 </body>
 
 </html>

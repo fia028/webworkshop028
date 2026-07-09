@@ -11,8 +11,48 @@ body {
 }
 
 footer,
-.hero,
-.card,
+.hero{
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 25px;
+    background: #d5e6f1;
+    border: 1px solid rgb(175, 78, 78);
+}
+
+.hero h1{
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+.hero p{
+    font-size:18px;
+    color:#000000;
+}
+
+.card{
+    background:#ebf8ff;
+    border:1px solid #9e1616;
+    padding:20px;
+}
+
+.card h3{
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+.label{
+    display:inline-block;
+    font-weight:normal;
+    color:#000000;
+}
+
+.label3{
+    display:inline-block;
+    font-weight:normal;
+    color:#000000;
+}
+
 .tip-box {
   border: 1px solid rgb(5, 5, 5);
   background-color: #ebf8ff;
@@ -40,7 +80,7 @@ header {background: linear-gradient(to right, #7a9eee, #4bbce9);
 .brand-text p {font-size: 14px;}
 
 nav a {
-  color: aliceblue;
+  color: rgb(243, 242, 242);
   text-decoration: none;
   margin-left: 20px;
 }
@@ -50,8 +90,6 @@ nav a:hover{
   text-decoration: underline;
 }
 
-
-
 .container {
   max-width: 1200px;
   width: 90%;
@@ -60,9 +98,11 @@ nav a:hover{
   background-color: rgb(178, 181, 209);
 }
 
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+.card-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
 
-  background-color: rgb(106, 131, 243);
+    background-color: #4bbce9;
+    padding: 20px;
 }
