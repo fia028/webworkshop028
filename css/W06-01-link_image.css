@@ -248,6 +248,45 @@ figcaption {
   text-align: center;
   font-size: 15px;}
 
+.side-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 16px 18px;
+}
+
+.side-card h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.objective-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.objective-list li {
+  display: flex;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.objective-num {
+  flex: 1 0 auto;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: rgb(48, 36, 223);
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 
 
