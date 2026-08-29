@@ -2,409 +2,531 @@
 <html lang="th">
 <head>
     <meta charset="utf-8">
-    <title>The HTML5 Tutorial</title>
-    <meta name="description" content="HTML Tutorial - Learn HTML basics including structure, tags, links, lists, images, tables, forms and more.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The HTML5 Tutorial - งานส่งอาจารย์</title>
+    <meta name="description" content="HTML Tutorial - Learn HTML basics including structure, tags, links, lists, images, tables, forms and more.">
+    
+    <!-- ฟอนต์ภาษาไทย Sarabun อ่านง่ายเป็นทางการ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600&display=swap" rel="stylesheet">
+
     <style>
         html {
             scroll-behavior: smooth;
         }
+
         body {
-            font-family: Arial, sans-serif;
-            margin: 30px;
-            padding: 10px;
+            font-family: 'Sarabun', sans-serif;
+            margin: 0;
+            padding: 0;
             line-height: 1.6;
-            background-color: #fffefb;
+            background-color: #f4f6f9;
+            color: #333333;
         }
 
-        h1 {
-            color: #5846fd;
+        /* ส่วนหัวเว็บไซต์ */
+        header {
+            background-color: #3b5998;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        header p {
+            margin: 5px 0 0 0;
+            font-size: 15px;
+            opacity: 0.9;
+        }
+
+        /* Container หลัก */
+        .main-container {
+            max-width: 850px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+
+        /* กล่องข้อมูลนักศึกษา */
+        .student-info {
+            background-color: #e8f4f8;
+            border-left: 5px solid #2196F3;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+
+        .student-info h3 {
+            margin: 0 0 8px 0;
+            color: #0b5394;
+        }
+
+        .student-info p {
+            margin: 3px 0;
+            font-size: 14px;
+        }
+
+        /* กล่องเนื้อหาแต่ละหัวข้อ */
+        .box-card {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
 
         h2 {
-            color: #ad0202;
+            color: #c0392b;
+            font-size: 20px;
+            margin-top: 0;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 8px;
         }
 
-        ul {
-            list-style-type: square;
+        /* รายการเมนูนำทาง */
+        .menu-list {
+            padding-left: 20px;
         }
 
-        a {
-            color: #000000;
+        .menu-list li {
+            margin-bottom: 6px;
+        }
+
+        .menu-list a {
+            color: #2980b9;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .menu-list a:hover {
+            color: #e74c3c;
+            text-decoration: underline;
+        }
+
+        /* ปุ่ม Workshop */
+        .btn-workshop {
+            display: inline-block;
+            background-color: #e7e7e7;
+            color: #333;
+            padding: 4px 10px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 13px;
+            border: 1px solid #ccc;
+            margin-right: 5px;
+        }
+
+        .btn-workshop:hover {
+            background-color: #2c3e50;
+            color: #fff;
+        }
+
+        /* กล่องแสดงโค้ด pre */
+        pre {
+            background-color: #fcf8e3;
+            border: 1px solid #faebcc;
+            border-left: 4px solid #f0ad4e;
+            padding: 12px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 14px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            border-radius: 4px;
+        }
+
+        /* ลิงก์กลับขึ้นข้างบน */
+        .top-link {
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 13px;
+            color: #777;
             text-decoration: none;
         }
 
-        a:hover {
-            text-decoration: underline;
-            color: aqua;
-        }
-            .text-center {
-                text-align: center;
+        .top-link:hover {
+            color: #333;
         }
 
-        pre {
-            background-color: bisque;
-            padding-top: 10px;
-            border-left: 3px solid rgb(0, 60, 255);
-            font-size: 16px;
-            white-space: pre-wrap;
-            border-radius: 10px;
-}
-
+        /* ส่วนท้าย */
         footer {
-            background-color: black;
-            margin-top: 50px;
-            padding: 10px;
+            background-color: #2c3e50;
+            color: white;
             text-align: center;
-            color: #be4444;
+            padding: 15px;
+            margin-top: 30px;
+            font-size: 14px;
         }
 
+        footer a {
+            color: #f1c40f;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
-<h1 id="top">HTML Tutorial</h1>
-<p>Welcome to the HTML tutorial. Click on the topics below to start learning:</p>
 
-<h2>Topics</h2>
-<ul>
-    <li><a href="#introduction">Introduction to HTML</a></li>
-    <li><a href="#document-structure">HTML Document Structure</a></li>
-    <li><a href="#heading">Heading</a></li>
-    <li><a href="#paragraph">Paragraph</a></li>
-    <li><a href="#text-formatting">Text Formatting</a></li>
-    <li><a href="#creating-links">Creating Links</a></li>
-    <li><a href="#lists">Lists (Ordered and Unordered)</a></li>
-    <li><a href="#adding-images">Adding Images</a></li>
-    <li><a href="#creating-tables">Creating Tables</a></li>
-    <li><a href="#html-forms">HTML Forms</a></li>
-    <li><a href="#semantic">Semantic HTML</a></li>
-    <li><a href="#workshop">Workshop</a></li>
-</ul>
+<header>
+    <h1 id="top">HTML Tutorial</h1>
+    <p>Welcome to the HTML tutorial. Click on the topics below to start learning:</p>
+</header>
 
-<hr>
+<div class="main-container">
 
-<!-- Introduction to HTML -->
-    <h2 id="introduction">Introduction to HTML</h2>
-    <pre>
-    - HTML stands for Hyper Text Markup Language
-    - HTML is the standard markup language for creating Web pages
-    - HTML describes the structure of a Web page
-    - HTML consists of a series of elements
-    - HTML elements tell the browser how to display the content
-    - HTML elements are represented by tags
-    - HTML tags label pieces of content such as "heading", "paragraph", "table", and so on
-    - Browsers do not display the HTML tags, but use them to render the content of the page
-    - HTML can embed programs written in a scripting language such as JavaScript, which affects the behavior and content of web pages
-    - HTML is not a programming language, but a markup language
-    </pre>
-    <a href="#top">back to top</a>
-<hr>
+    <!-- สารบัญเมนู -->
+    <nav class="box-card">
+        <h2>Topics</h2>
+        <ul class="menu-list">
+            <li><a href="#introduction">Introduction to HTML</a></li>
+            <li><a href="#document-structure">HTML Document Structure</a></li>
+            <li><a href="#heading">Heading</a></li>
+            <li><a href="#paragraph">Paragraph</a></li>
+            <li><a href="#text-formatting">Text Formatting</a></li>
+            <li><a href="#creating-links">Creating Links</a></li>
+            <li><a href="#lists">Lists (Ordered and Unordered)</a></li>
+            <li><a href="#adding-images">Adding Images</a></li>
+            <li><a href="#creating-tables">Creating Tables</a></li>
+            <li><a href="#html-forms">HTML Forms</a></li>
+            <li><a href="#semantic">Semantic HTML</a></li>
+            <li><a href="#workshop">Workshop</a></li>
+        </ul>
+    </nav>
 
-<!-- HTML Document Structure -->
-    <h2 id="document-structure">HTML Document Structure</h2>
-    <p>workshop</p>
-    <p>An HTML document has the following basic structure...</p>
-    <pre>
-        คำอธิบาย:
-        &lt;!DOCTYPE html&gt;: ระบุว่าเป็นเอกสาร HTML5
-        &lt;html&gt;: เป็นรากของเอกสาร HTML ทั้งหมด
-        &lt;head&gt;: ส่วนที่ใช้เก็บข้อมูลเมตา เช่น &lt;title&gt; ชื่อหน้าเว็บ
-        &lt;body&gt;: ส่วนที่จะแสดงผลบนหน้าเว็บ
-        องค์ประกอบสำคัญของ HTML
-        แท็ก (Tags):
-        - แท็กเริ่มต้น (Opening Tag): เช่น &lt;h1&gt;
-        - แท็กปิด (Closing Tag): เช่น &lt;/h1&gt;
-        แอตทริบิวต์ (Attributes): คุณสมบัติของแท็ก
-        - ใช้เพื่อกำหนดคุณสมบัติเพิ่มเติม เช่น href, src, width, height
+    <main>
+        <!-- Introduction to HTML -->
+        <section class="box-card" id="introduction">
+            <h2>Introduction to HTML</h2>
+            <pre>
+- HTML stands for Hyper Text Markup Language
+- HTML is the standard markup language for creating Web pages
+- HTML describes the structure of a Web page
+- HTML consists of a series of elements
+- HTML elements tell the browser how to display the content
+- HTML elements are represented by tags
+- HTML tags label pieces of content such as "heading", "paragraph", "table", and so on
+- Browsers do not display the HTML tags, but use them to render the content of the page
+- HTML can embed programs written in a scripting language such as JavaScript, which affects the behavior and content of web pages
+- HTML is not a programming language, but a markup language
+            </pre>
+            <a href="#top" class="top-link">▲ กลับขึ้นด้านบน (back to top)</a>
+        </section>
 
-        ตัวอย่าง: &lt;h1&gt;Hello, World!&lt;/h1&gt;
-                &lt;img src="image.jpg" alt="A description of the image"&gt;
-    </pre>
-    <a href="#top">back to top</a>
-<hr>
+        <!-- HTML Document Structure -->
+        <section class="box-card" id="document-structure">
+            <h2>HTML Document Structure</h2>
+            <p><a href="#" class="btn-workshop">workshop</a></p>
+            <p>An HTML document has the following basic structure...</p>
+            <pre>
+คำอธิบาย:
+&lt;!DOCTYPE html&gt;: ระบุว่าเป็นเอกสาร HTML5
+&lt;html&gt;: เป็นรากของเอกสาร HTML ทั้งหมด
+&lt;head&gt;: ส่วนที่ใช้เก็บข้อมูลเมตา เช่น &lt;title&gt; ชื่อหน้าเว็บ
+&lt;body&gt;: ส่วนที่จะแสดงผลบนหน้าเว็บ
 
-<!-- Heading -->
-    <h2 id="heading">Heading</h2>
-    <a href="W03-01-heading.html">workshop 01</a>
-    <a href="W03-02-heading-51.html">workshop 02</a>
-    <p>HTML headings are defined with the &lt;h1&gt; to &lt;h6&gt; tags...</p>
-    <pre>
-    - &lt;h1&gt;: Heading 1
-    - &lt;h2&gt;: Heading 2
-    - &lt;h3&gt;: Heading 3
-    - &lt;h4&gt;: Heading 4
-    - &lt;h5&gt;: Heading 5
-    - &lt;h6&gt;: Heading 6
-    </pre>
-    <a href="#top">back to top</a>
+องค์ประกอบสำคัญของ HTML
+แท็ก (Tags):
+- แท็กเริ่มต้น (Opening Tag): เช่น &lt;h1&gt;
+- แท็กปิด (Closing Tag): เช่น &lt;/h1&gt;
 
-<hr>
+แอตทริบิวต์ (Attributes): คุณสมบัติของแท็ก
+- ใช้เพื่อกำหนดคุณสมบัติเพิ่มเติม เช่น href, src, width, height
 
-<!-- Paragraph -->
-<section>
-    <h2 id="paragraph">Paragraph</h2>
-    <p>workshop</p>
-    <p>HTML paragraphs are defined with the &lt;p&gt; tag...</p>
-    <pre>
-    - &lt;p&gt;: Paragraph
-    </pre>
-    <a href="#top">back to top</a>
-</section>
+ตัวอย่าง: &lt;h1&gt;Hello, World!&lt;/h1&gt;
+        &lt;img src="image.jpg" alt="A description of the image"&gt;
+            </pre>
+            <a href="#top" class="top-link">▲ กลับขึ้นด้านบน (back to top)</a>
+        </section>
 
-<hr>
+        <!-- Heading -->
+        <section class="box-card" id="heading">
+            <h2>Heading</h2>
+            <p>
+                <a href="W03-01-heading.html" class="btn-workshop">workshop 01</a>
+                <a href="W03-02-heading-51.html" class="btn-workshop">workshop 02</a>
+            </p>
+            <p>HTML headings are defined with the &lt;h1&gt; to &lt;h6&gt; tags...</p>
+            <pre>
+- &lt;h1&gt;: Heading 1
+- &lt;h2&gt;: Heading 2
+- &lt;h3&gt;: Heading 3
+- &lt;h4&gt;: Heading 4
+- &lt;h5&gt;: Heading 5
+- &lt;h6&gt;: Heading 6
+            </pre>
+            <a href="#top" class="top-link">▲ กลับขึ้นด้านบน (back to top)</a>
+        </section>
 
-<!-- Text Formatting -->
-    <h2 id="text-formatting">Text Formatting</h2>
-    <p>workshop</p>
-    <p>HTML provides various elements to format text...</p>
-    <pre>
-    - &lt;h1&gt; to &lt;h6&gt;: Headings
-    - &lt;p&gt;: Paragraph
-    - &lt;pre&gt;: Preformatted text
-    - &lt;b&gt;: Bold text
-    - &lt;strong&gt;: Important text
-    - &lt;i&gt;: Italic text
-    - &lt;em&gt;: Emphasized text
-    - &lt;u&gt;: Underline text
-    - &lt;ins&gt;: Inserted text
+        <!-- Paragraph -->
+        <section class="box-card" id="paragraph">
+            <h2>Paragraph</h2>
+            <p><a href="#" class="btn-workshop">workshop</a></p>
+            <p>HTML paragraphs are defined with the &lt;p&gt; tag...</p>
+            <pre>
+- &lt;p&gt;: Paragraph
+            </pre>
+            <a href="#top" class="top-link">▲ กลับขึ้นด้านบน (back to top)</a>
+        </section>
 
-    - &lt;del&gt;: Deleted text
-    - &lt;s&gt;: Strikethrough text
-    - &lt;strike&gt;: Strikethrough text
-    - &lt;small&gt;: Smaller text
-    - &lt;big&gt;: Big text
-    - &lt;mark&gt;: Marked/highlighted text
-    - &lt;sub&gt;: Subscript text
-    - &lt;sup&gt;: Superscript text
-    - &lt;blockquote&gt;: Block quotation
-    - &lt;q&gt;: Inline quotation
-    - &lt;code&gt;: Code snippet
-    </pre>
-    <a href="#top">back to top</a>
+        <!-- Text Formatting -->
+        <section class="box-card" id="text-formatting">
+            <h2>Text Formatting</h2>
+            <p><a href="#" class="btn-workshop">workshop</a></p>
+            <p>HTML provides various elements to format text...</p>
+            <pre>
+- &lt;h1&gt; to &lt;h6&gt;: Headings
+- &lt;p&gt;: Paragraph
+- &lt;pre&gt;: Preformatted text
+- &lt;b&gt;: Bold text
+- &lt;strong&gt;: Important text
+- &lt;i&gt;: Italic text
+- &lt;em&gt;: Emphasized text
+- &lt;u&gt;: Underline text
+- &lt;ins&gt;: Inserted text
+- &lt;del&gt;: Deleted text
+- &lt;s&gt;: Strikethrough text
+- &lt;strike&gt;: Strikethrough text
+- &lt;small&gt;: Smaller text
+- &lt;big&gt;: Big text
+- &lt;mark&gt;: Marked/highlighted text
+- &lt;sub&gt;: Subscript text
+- &lt;sup&gt;: Superscript text
+- &lt;blockquote&gt;: Block quotation
+- &lt;q&gt;: Inline quotation
+- &lt;code&gt;: Code snippet
+            </pre>
+            <a href="#top" class="top-link">▲ กลับขึ้นด้านบน (back to top)</a>
+        </section>
 
-<hr>
+        <!-- Creating Links -->
+        <section class="box-card" id="creating-links">
+            <h2>Creating Links</h2>
+            <p><a href="#" class="btn-workshop">workshop</a></p>
+            <p>HTML links are defined with the &lt;a&gt; tag...</p>
+            <pre>
+- &lt;a href="url" target=""&gt;Link text&lt;/a&gt;
+- The href attribute specifies the URL of the page the link goes to
+- The target attribute specifies where to open the linked document
+    - _self: Open the linked document in the same window/tab
+    - _blank: Open the linked document in a new window/tab
+    - _parent: Open the linked document in the parent frame
+    - _top: Open the linked document in the full body of the window
+- The link text is the visible part of the link
+- Anchor links:
+    - Use the href attribute with the # symbol to link to a specific part of the page
+    - Use the id attribute to define the section to link to
+    - Example: &lt;a href="#section"&gt;Go to Section&lt;/a&gt;
+    - Example: &lt;h3 id="section"&gt;This is the Section&lt;/h3&gt;
+- Email links:
+    - Use the mailto: prefix to create an email link
+    - Example: &lt;a href="mailto:support@example.com"&gt;email us&lt;/a&gt;
+- Download links:
+    - Use the download attribute to create a download link
+    - Example: &lt;a href="file.txt" download&gt;Download Text File&lt;/a&gt;
+            </pre>
+            <a href="#top" class="top-link">▲ กลับขึ้นด้านบน (back to top)</a>
+        </section>
 
-<!-- Creating Links -->
-    <h2 id="creating-links">Creating Links</h2>
-    <p>workshop</p>
-    <p>HTML links are defined with the &lt;a&gt; tag...</p>
-    <pre>
-        - &lt;a href="url" target=""&gt;Link text&lt;/a&gt;
-        - The href attribute specifies the URL of the page the link goes to
-        - The target attribute specifies where to open the linked document
-            - _self: Open the linked document in the same window/tab
-            - _blank: Open the linked document in a new window/tab
-            - _parent: Open the linked document in the parent frame
-            - _top: Open the linked document in the full body of the window
-        - The link text is the visible part of the link
-        - Anchor links:
-            - Use the href attribute with the # symbol to link to a specific part of the page
-            - Use the id attribute to define the section to link to
-            - Example: &lt;a href="#section"&gt;Go to Section&lt;/a&gt;
-            - Example: &lt;h3 id="section"&gt;This is the Section&lt;/h3&gt;
-        - Email links:
-            - Use the mailto: prefix to create an email link
-            - Example: &lt;a href="mailto:support@example.com"&gt;email us&lt;/a&gt;
-        - Download links:
-            - Use the download attribute to create a download link
-            - Example: &lt;a href="file.txt" download&gt;Download Text File&lt;/a&gt;
-    </pre>
-    <a href="#top">back to top</a>
+        <!-- Lists -->
+        <section class="box-card" id="lists">
+            <h2>Lists (Ordered and Unordered)</h2>
+            <p><a href="#" class="btn-workshop">workshop</a></p>
+            <p>HTML lists are defined with the &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; tags...</p>
+            <pre>
+- &lt;ul&gt;: Unordered list
+- &lt;ol&gt;: Ordered list
+- &lt;li&gt;: List item
+- Unordered list:
+    - Use the &lt;ul&gt; tag to create an unordered list
+    - Use the &lt;li&gt; tag to create each list item
+    - Example:
+        &lt;ul&gt;
+            &lt;li&gt;Coffee&lt;/li&gt;
+            &lt;li&gt;Tea&lt;/li&gt;
+            &lt;li&gt;Milk&lt;/li&gt;
+        &lt;/ul&gt;
+- Ordered list:
+    - Use the &lt;ol&gt; tag to create an ordered list
+    - Use the &lt;li&gt; tag to create each list item
+    - Example:
+        &lt;ol&gt;
+            &lt;li&gt;Coffee&lt;/li&gt;
+            &lt;li&gt;Tea&lt;/li&gt;
+            &lt;li&gt;Milk&lt;/li&gt;
+        &lt;/ol&gt;
+- List style types:
+    - Use the list-style-type property to define the style of the list
+    - Example: &lt;ul style="list-style-type: disc;"&gt;
+    - Example: &lt;ul style="list-style-type: circle;"&gt;
+    - Example: &lt;ul style="list-style-type: square;"&gt;
+    - Example: &lt;ul style="list-style-type: none;"&gt;
+    - Example: &lt;ol type="1"&gt;
+    - Example: &lt;ol type="A"&gt;
+    - Example: &lt;ol type="a"&gt;
+    - Example: &lt;ol type="I"&gt;
+    - Example: &lt;ol type="i"&gt;
+    - Example: &lt;ol type="A" start="3"&gt;
+    - Example: &lt;ol type="1" start="3"&gt;
+    - Example: &lt;ol style="list-style-type: decimal;"&gt;
+    - Example: &lt;ol style="list-style-type: upper-alpha;"&gt;
+    - Example: &lt;ol style="list-style-type: lower-alpha;"&gt;
+    - Example: &lt;ol style="list-style-type: upper-roman;"&gt;
+    - Example: &lt;ol style="list-style-type: lower-roman;"&gt;
+            </pre>
+            <a href="#top" class="top-link">▲ กลับขึ้นด้านบน (back to top)</a>
+        </section>
 
-<hr>
+        <!-- Adding Images -->
+        <section class="box-card" id="adding-images">
+            <h2>Adding Images</h2>
+            <p><a href="#" class="btn-workshop">workshop</a></p>
+            <p>HTML images are defined with the &lt;img&gt; tag...</p>
+            <pre>
+- &lt;img src="url" alt="description"&gt;
+- The src attribute specifies the URL of the image
+- The alt attribute provides a description of the image
+- The width and height attributes provide the size of the image
+    - Example: &lt;img src="image.jpg" alt="description of image"&gt;
+    - Example: &lt;img src="image.jpg" alt="description of image" width="300" height="200"&gt;
+- Image alignment:
+    - Use the align attribute to specify the alignment of an image
+    - Example: &lt;img src="image.jpg" alt="description" align="left"&gt;
+    - Example: &lt;img src="image.jpg" alt="description" align="right"&gt;
+- Image border:
+    - Use the border attribute to add a border around an image
+    - Example: &lt;img src="image.jpg" alt="description" border="1"&gt;
+- Image link:
+    - Use the &lt;a&gt; tag to create a link around an image
+    - Example: &lt;a href="url"&gt;&lt;img src="image.jpg" alt="description"&gt;&lt;/a&gt;
+- Image gallery:
+    - Use the &lt;div&gt; tag to create an image gallery
+    - Use the &lt;img&gt; tag to display each image
+    - Example:
+        &lt;div class="gallery"&gt;
+            &lt;img src="image1.jpg" alt="Image 1"&gt;
+            &lt;img src="image2.jpg" alt="Image 2"&gt;
+            &lt;img src="image3.jpg" alt="Image 3"&gt;
+        &lt;/div&gt;
+- flex box:
+    - Use the display: flex; property to create a flex container
+    - Use the gap property to create space between flex items
+    - Example:
+        .gallery {
+            display: flex;
+            gap: 10px;
+        }
+        .gallery img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+            </pre>
+            <a href="#top" class="top-link">▲ กลับขึ้นด้านบน (back to top)</a>
+        </section>
 
-<!-- Lists -->
-    <h2 id="lists">Lists (Ordered and Unordered)</h2>
-    <p>workshop</p>
-    <p>HTML lists are defined with the &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; tags...</p>
-    <pre>
-    - &lt;ul&gt;: Unordered list
-    - &lt;ol&gt;: Ordered list
-    - &lt;li&gt;: List item
-    - Unordered list:
-        - Use the &lt;ul&gt; tag to create an unordered list
-        - Use the &lt;li&gt; tag to create each list item
-        - Example:
-            &lt;ul&gt;
-                &lt;li&gt;Coffee&lt;/li&gt;
-                &lt;li&gt;Tea&lt;/li&gt;
-                &lt;li&gt;Milk&lt;/li&gt;
-            &lt;/ul&gt;
-    - Ordered list:
-        - Use the &lt;ol&gt; tag to create an ordered list
-        - Use the &lt;li&gt; tag to create each list item
-        - Example:
-            &lt;ol&gt;
-                &lt;li&gt;Coffee&lt;/li&gt;
-                &lt;li&gt;Tea&lt;/li&gt;
-                &lt;li&gt;Milk&lt;/li&gt;
-            &lt;/ol&gt;
-    - List style types:
-        - Use the list-style-type property to define the style of the list
-        - Example: &lt;ul style="list-style-type: disc;"&gt;
-        - Example: &lt;ul style="list-style-type: circle;"&gt;
-        - Example: &lt;ul style="list-style-type: square;"&gt;
-        - Example: &lt;ul style="list-style-type: none;"&gt;
-        - Example: &lt;ol type="1"&gt;
-        - Example: &lt;ol type="A"&gt;
-        - Example: &lt;ol type="a"&gt;
-        - Example: &lt;ol type="I"&gt;
-        - Example: &lt;ol type="i"&gt;
-        - Example: &lt;ol type="A" start="3"&gt;
-        - Example: &lt;ol type="1" start="3"&gt;
-        - Example: &lt;ol style="list-style-type: decimal;"&gt;
-        - Example: &lt;ol style="list-style-type: upper-alpha;"&gt;
-        - Example: &lt;ol style="list-style-type: lower-alpha;"&gt;
-        - Example: &lt;ol style="list-style-type: upper-roman;"&gt;
-        - Example: &lt;ol style="list-style-type: lower-roman;"&gt;
-    </pre>
-    <a href="#top">back to top</a>
+        <!-- Creating Tables -->
+        <section class="box-card" id="creating-tables">
+            <h2>Creating Tables</h2>
+            <p>
+                <a href="#" class="btn-workshop">Workshop 1</a>
+                <a href="#" class="btn-workshop">Workshop 2</a>
+            </p>
+            <p>HTML tables are defined with the &lt;table&gt;, &lt;tr&gt;, &lt;th&gt;, and &lt;td&gt; tags...</p>
+            <pre>
+- &lt;table&gt;: Table
+- &lt;tr&gt;: Table row
+- &lt;th&gt;: Table header
+- &lt;td&gt;: Table data/cell
+            </pre>
+            <a href="#top" class="top-link">▲ กลับขึ้นด้านบน (back to top)</a>
+        </section>
 
-<hr>
+        <!-- HTML Forms -->
+        <section class="box-card" id="html-forms">
+            <h2>HTML Forms</h2>
+            <p>
+                <a href="#" class="btn-workshop">Workshop 1</a>
+                <a href="#" class="btn-workshop">Workshop 2</a>
+            </p>
+            <p>HTML forms are defined with the &lt;form&gt; tag...</p>
+            <pre>
+หัวข้อเกี่ยวกับฟอร์ม
 
-<!-- Adding Images -->
-    <h2 id="adding-images">Adding Images</h2>
-    <p>workshop</p>
-    <p>HTML images are defined with the &lt;img&gt; tag...</p>
-    <pre>
-        - &lt;img src="url" alt="description"&gt;
-        - The src attribute specifies the URL of the image
-        - The alt attribute provides a description of the image
-        - The width and height attributes provide the size of the image
-            - Example: &lt;img src="image.jpg" alt="description of image"&gt;
-            - Example: &lt;img src="image.jpg" alt="description of image" width="300" height="200"&gt;
-        - Image alignment:
-            - Use the align attribute to specify the alignment of an image
-            - Example: &lt;img src="image.jpg" alt="description" align="left"&gt;
-            - Example: &lt;img src="image.jpg" alt="description" align="right"&gt;
-        - Image border:
-            - Use the border attribute to add a border around an image
-            - Example: &lt;img src="image.jpg" alt="description" border="1"&gt;
-        - Image link:
-            - Use the &lt;a&gt; tag to create a link around an image
-            - Example: &lt;a href="url"&gt;&lt;img src="image.jpg" alt="description"&gt;&lt;/a&gt;
-        - Image gallery:
-            - Use the &lt;div&gt; tag to create an image gallery
-            - Use the &lt;img&gt; tag to display each image
-            - Example:
-                &lt;div class="gallery"&gt;
-                    &lt;img src="image1.jpg" alt="Image 1"&gt;
-                    &lt;img src="image2.jpg" alt="Image 2"&gt;
-                    &lt;img src="image3.jpg" alt="Image 3"&gt;
-                &lt;/div&gt;
-        - flex box:
-            - Use the display: flex; property to create a flex container
-            - Use the gap property to create space between flex items
-            - Example:
-                .gallery {
-                    display: flex;
-                    gap: 10px;
-                }
-                .gallery img {
-                    width: 150px;
-                    height: 150px;
-                    object-fit: cover;
-                }
-    </pre>
-    <a href="#top">back to top</a>
+1. โครงสร้างพื้นฐานของฟอร์ม
+    - &lt;form&gt;: ใช้เป็นตัวครอบข้อมูลในฟอร์ม
+    - action และ method (GET/POST): การกำหนดปลายทางและวิธีส่งข้อมูล
 
-<hr>
+2. ชนิดของอินพุต (Input Types)
+    - &lt;input&gt;: ชนิดต่าง ๆ เช่น text, password, email, number, radio, checkbox, date, file
+    - &lt;textarea&gt;: ช่องข้อความขนาดใหญ่
+    - &lt;select&gt; และ &lt;option&gt;: เมนูแบบเลื่อนลง
+    - &lt;datalist&gt;: รายการตัวเลือกที่กำหนดไว้ล่วงหน้า
+    - &lt;optgroup&gt;: กลุ่มตัวเลือก
+    - &lt;fieldset&gt; และ &lt;legend&gt;: กลุ่มข้อมูลที่เกี่ยวข้อง
 
-<!-- Creating Tables -->
-    <h2 id="creating-tables">Creating Tables</h2>
-    <p><a href="#">Workshop 1</a> <a href="#">Workshop 2</a></p>
-    <p>HTML tables are defined with the &lt;table&gt;, &lt;tr&gt;, &lt;th&gt;, and &lt;td&gt; tags...</p>
-    <pre>
-        - &lt;table&gt;: Table
-        - &lt;tr&gt;: Table row
-        - &lt;th&gt;: Table header
-        - &lt;td&gt;: Table data/cell
-    </pre>
-    <a href="#top">back to top</a>
+3. ปุ่มในฟอร์ม
+    - &lt;button&gt;: ปุ่มทั่วไป
+    - &lt;input type="submit"&gt; และ &lt;input type="reset"&gt;: ปุ่มส่งและล้างข้อมูล
+    - &lt;input type="button"&gt;: ปุ่มทั่วไป
+    - &lt;input type="image"&gt;: ปุ่มรูปภาพ
+    - &lt;input type="file"&gt;: ปุ่มอัพโหลดไฟล์
 
-<hr>
+4. การจัดการป้ายกำกับ (Labels)
+    - &lt;label&gt;: เพื่อเชื่อมกับ &lt;input&gt; (ช่วยเพิ่มการเข้าถึง)
+    - for: ระบุ id ของอินพุตที่เกี่ยวข้อง
 
-<!-- HTML Forms -->
-    <h2 id="html-forms">HTML Forms</h2>
-    <p><a href="#">Workshop 1</a> <a href="#">Workshop 2</a></p>
-    <p>HTML forms are defined with the &lt;form&gt; tag...</p>
-    <pre>
-        หัวข้อเกี่ยวกับฟอร์ม
+5. การตรวจสอบข้อมูล (Validation)
+    - คุณสมบัติ เช่น required, min, max, pattern
+    - การใช้ JavaScript เพื่อทำการตรวจสอบ
 
-        1. โครงสร้างพื้นฐานของฟอร์ม
-            - &lt;form&gt;: ใช้เป็นตัวครอบข้อมูลในฟอร์ม
-            - action และ method (GET/POST): การกำหนดปลายทางและวิธีส่งข้อมูล
+6. ฟอร์มแบบสมัยใหม่ (HTML5)
+    - placeholder: ตัวอย่างข้อความในช่องอินพุต
+    - autofocus: ให้ฟอร์มเริ่มต้นโฟกัส
 
-        2. ชนิดของอินพุต (Input Types)
-            - &lt;input&gt;: ชนิดต่าง ๆ เช่น text, password, email, number,
-                                    radio, checkbox, date, file
-            - &lt;textarea&gt;: ช่องข้อความขนาดใหญ่
-            - &lt;select&gt; และ &lt;option&gt;: เมนูแบบเลื่อนลง
-            - &lt;datalist&gt;: รายการตัวเลือกที่กำหนดไว้ล่วงหน้า
-            - &lt;optgroup&gt;: กลุ่มตัวเลือก
-            - &lt;fieldset&gt; และ &lt;legend&gt;: กลุ่มข้อมูลที่เกี่ยวข้อง
+7. การส่งฟอร์ม (Form Submission)
+    - การส่งข้อมูลไปยังเซิร์ฟเวอร์
+    - การใช้ JavaScript (เช่น onsubmit)
+            </pre>
+            <a href="#top" class="top-link">▲ กลับขึ้นด้านบน (back to top)</a>
+        </section>
 
-        3. ปุ่มในฟอร์ม
-            - &lt;button&gt;: ปุ่มทั่วไป
-            - &lt;input type="submit"&gt; และ &lt;input type="reset"&gt;: ปุ่มส่งและล้างข้อมูล
-            - &lt;input type="button"&gt;: ปุ่มทั่วไป
-            - &lt;input type="image"&gt;: ปุ่มรูปภาพ
-            - &lt;input type="file"&gt;: ปุ่มอัพโหลดไฟล์
+        <!-- Semantic HTML -->
+        <section class="box-card" id="semantic">
+            <h2>Semantic HTML</h2>
+            <p><a href="#" class="btn-workshop">workshop</a></p>
+            <p>HTML elements clearly define the content of a web page...</p>
+            <pre>
+- &lt;header&gt;: Defines a header for a document or section
+- &lt;nav&gt;: Defines navigation links
+- &lt;section&gt;: Defines a section in a document
+- &lt;article&gt;: Defines an article
+- &lt;aside&gt;: Defines content aside from the page content
+- &lt;footer&gt;: Defines a footer for a document or section
+            </pre>
+            <a href="#top" class="top-link">▲ กลับขึ้นด้านบน (back to top)</a>
+        </section>
 
-        4. การจัดการป้ายกำกับ (Labels)
-            - &lt;label&gt;: เพื่อเชื่อมกับ &lt;input&gt; (ช่วยเพิ่มการเข้าถึง)
-            - for: ระบุ id ของอินพุตที่เกี่ยวข้อง
+        <!-- My Workshop -->
+        <section class="box-card" id="workshop">
+            <h2>My Workshop</h2>
+            <ul class="menu-list">
+                <li><a href="#">workshop 01 : การใช้งาน Heading และ Paragraph</a></li>
+                <li><a href="#">workshop 02 : การจัดรูปแบบข้อความและรูปภาพ</a></li>
+            </ul>
+            <a href="#top" class="top-link">▲ กลับขึ้นด้านบน (back to top)</a>
+        </section>
+    </main>
 
-        5. การตรวจสอบข้อมูล (Validation)
-            - คุณสมบัติ เช่น required, min, max, pattern
-            - การใช้ JavaScript เพื่อทำการตรวจสอบ
-
-        6. ฟอร์มแบบสมัยใหม่ (HTML5)
-            - placeholder: ตัวอย่างข้อความในช่องอินพุต
-            - autofocus: ให้ฟอร์มเริ่มต้นโฟกัส
-
-        7. การส่งฟอร์ม (Form Submission)
-            - การส่งข้อมูลไปยังเซิร์ฟเวอร์
-            - การใช้ JavaScript (เช่น onsubmit)
-    </pre>
-    <a href="#top">back to top</a>
-
-<hr>
-
-<!-- Semantic HTML -->
-    <h2 id="semantic">Semantic HTML</h2>
-    <p>workshop</p>
-    <p>HTML elements clearly define the content of a web page...</p>
-    <pre>
-        - &lt;header&gt;: Defines a header for a document or section
-        - &lt;nav&gt;: Defines navigation links
-        - &lt;section&gt;: Defines a section in a document
-        - &lt;article&gt;: Defines an article
-        - &lt;aside&gt;: Defines content aside from the page content
-        - &lt;footer&gt;: Defines a footer for a document or section
-    </pre>
-    <a href="#top">back to top</a>
-
-<hr>
-
-<!-- My Workshop -->
-    <h2 id="workshop">My Workshop</h2>
-    <ul>
-        <li><a href="">workshop 01 :....</a></li>
-        <li><a href="">workshop 01 :....</a></li>
-    </ul>
-    <a href="#top">back to top</a>
-    <hr>
-    <div class="text-center">
-        <a href="https://www.w3schools.com/">Learn more about HTML</a>
-        <p >&copy; 2024 HTML Tutorial by Patchapon Raekeaw 2026</p>
-    </div>
+</div>
 
 <footer>
+    <p><a href="https://www.w3schools.com/" target="_blank">Learn more about HTML (W3Schools)</a></p>
+    <p>&copy; 2024 HTML Tutorial by Patchapon Raekeaw 2026</p>
 </footer>
 
 </body>
 </html>
-apps-fileview.texmex_20260610.09_p0
-test.html
-กำลังแสดง test.html 
