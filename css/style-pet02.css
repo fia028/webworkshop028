@@ -1,8 +1,8 @@
-* {
+/* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
+} */
 
 :root {
   /* สีหลังของwebsite */
@@ -15,6 +15,9 @@
   --nav-text-color: rgb(56, 54, 54);
   --light-text-color: rgb(255, 255, 255);
   --dark-color: black;
+
+  --red-text-color: rgb(255, 0, 0);
+  --green-text-color: rgb(3, 148, 3);
 
   /* สีพื้นหลัง */
   --header-bg-color: rgba(241, 245, 242, 0.548);
@@ -153,11 +156,11 @@ body {
   display: none;
 }
 
-#filter-dog:checked ~ main .pet-dog,
-#filter-cat:checked ~ main .pet-cat,
-#filter-bird:checked ~ main .pet-bird,
-#filter-fish:checked ~ main .pet-fish,
-#filter-smallanimal:checked ~ main .pet-small-pets {
+#filter-dog:checked ~ main .show-dog,
+#filter-cat:checked ~ main .show-cat,
+#filter-bird:checked ~ main .show-bird,
+#filter-fish:checked ~ main .show-fish,
+#filter-smallanimal:checked ~ main .show-small-pets {
   display: block;
 }
 
@@ -169,9 +172,10 @@ body {
 
 .pet-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat( auto-fit, minmax(min(250px, 100%), 1fr) );
 
   gap: 1.5rem;
+  padding: 0 1rem;
 }
 
 .pet-card {
@@ -208,6 +212,52 @@ body {
   color: var(--mute-text-color);
 }
 
+.pet-info {
+  list-style: none;
+}
+
+.info-lifespan { color: var(--primary-color)}
+.info-size { color: var(--red-text-color)}
+.info-temperament { color: var(--green-text-color)}
+
+.pet-details summary {
+  list-style: none;
+}
+
+.pet-btn {
+  background-color: var(--primary-color);
+  color: var(--light-text-color);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  cursor: pointer;
+  margin-block: 1rem;
+
+  transition: 50ms;
+}
+
+.pet-btn:hover {
+  background-color: var(--primary-dark-color);
+  transform: translateY(-2px);
+}
+
+.hide-detail {display: none;}
+
+.pet-details[open] .show-detail {display: none;}
+.pet-details[open] .hide-detail {display: inline;}
+
+.pet-details-body {
+  padding-top: 1rem;
+  border-top: 1px solid brown;
+
+  animation: appear 1s ease-in-out;
+}
+
+@keyframes appear {
+  from {opacity: 0; transform: translateY(-12px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
 .info-section {
   margin-top: 2.5rem;
   background-color: var(--light-bg-color);
@@ -223,7 +273,8 @@ body {
 
 .info-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  /* grid-template-columns: repeat(2, 1fr); */
+  grid-template-columns: repeat( auto-fit, minmax(min(250px, 100%), 1fr) );
   gap: 1.5rem;
 }
 
@@ -259,6 +310,57 @@ body {
 .info-orange {
   background-color: rgb(238, 221, 188);
 }
+
+/* +++++++++table+++++++++ */
+.pet-table {
+  border-collapse: collapse;
+  background-color: rgb(233, 239, 239);
+  margin-top: 2rem;
+  width: 100%;
+
+  table-layout: fixed; /* สำคัญ */
+}
+
+.pet-table th,
+.pet-table td {
+  border: 1px solid rgb(1, 0, 5);
+  padding: 0.75rem; /* ลดจาก 1rem */
+  vertical-align: top;
+
+  overflow-wrap: break-word;
+}
+
+.pet-table caption {
+  padding: 0.75rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  caption-side: top;
+
+  
+}
+
+.pet-table thead th {
+  background-color: var(--primary-color);
+  color: var(--light-text-color);
+  padding: 0.75rem;
+  white-space: nowrap;
+}
+
+.pet-table tbody th {
+  padding: 0.75rem;
+  background-color: rgb(193, 221, 245);
+  text-align: left;
+  white-space: nowrap;
+}
+
+.pet-table tbody tr:nth-child(even){
+  background-color: gray;
+}
+
+.pet-table tbody tr:hover{
+  background-color: rgb(230, 187, 187);
+}
+
 
 /* ===== learning form ===== */
 
@@ -333,3 +435,31 @@ footer {
   color: var(--light-text-color);
   margin-top: 1.5rem;
 }
+
+
+
+
+
+
+/* reponsive */
+/* @media (max-width: 992px) {
+  .pet-grid {
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0 1rem;
+}
+}
+
+
+@media (max-width: 768px) {
+  .pet-grid {
+  grid-template-columns: 1fr;
+
+  padding: 0 1rem;
+}
+  .catagory-nav label {
+    display: block;
+    margin: 1rem;
+
+    border-radius: 10px;
+}
+} */
