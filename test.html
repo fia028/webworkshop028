@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link and image</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- google-font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mitr:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #ebf8ff;
+            line-height: 1.6;
+        }
+
+
+        .tip-box {
+            border: 1px solid #ff0000;
+            background-color: #fff;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        /*---------- Header / Navigation ----------*/
+        header {
+            background: linear-gradient(to right, #f7f7f7, #90d2ec);
+            padding: 20px;
+            color: rgb(8, 89, 238);
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 47, 255, 0.3);
+        }
+
+        .main-nav {
+            padding: 15px;
+            margin: 15px;
+        }
+
+        .nav-list {
+            list-style-type: none;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .nav-list a {
+            color: black;
+            text-decoration: none;
+
+            padding: 15px;
+            border-radius: 8px;
+            transition: all 2s;
+        }
+
+        .main-layout {
+            background-color: rgb(119, 241, 225);
+
+            display: grid;
+            grid-template-columns: 1fr 390px;
+            padding: 20px 22px 0px;
+            gap: 15px;
+            padding: 120px;
+        }
+
+        .hero-text h1 {
+            color: black;
+            font-size: clam(2rem, 5vw, 3rem);
+            margin-top: auto;
+        }
+
+        .hero-text p {
+            margin-top: 20px;
+        }
+
+        .brand h2 {
+            margin-left: 5rem;
+        }
+
+        .back-btn {
+            color: white;
+            background-color: blue;
+            border-radius: 5px;
+            padding: 10px 15px;
+            margin-top: 50px;
+
+            text-decoration: none;
+
+            display: inline-block !important;
+        }
+
+        .info-section {
+            background-color: gray;
+            /* border-radius: 1rem; */
+            padding: 5rem;
+        }
+
+        .info-title {
+            margin-bottom: 1.5rem;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .info-grid article {
+            overflow: hidden;
+            border-radius: 1rem;
+        }
+
+        .info-blue h1 {}
+
+        .info-blue h1 {
+            text-align: center;
+        }
+
+        .info-purple h1 {
+            text-align: center;
+        }
+
+        .info-green h1 {
+            text-align: center;
+        }
+
+
+        .info-blue h1 {
+            background-color: #f09292;
+            padding: 40px;
+
+        }
+
+        .info-purple h1 {
+            background-color: #dbbff5;
+            padding: 40px;
+
+        }
+
+        .info-green h1 {
+            background-color: #b8eec1;
+            padding: 40px;
+
+        }
+
+        .info-blue p {
+            background-color: white;
+            padding: 40px;
+        }
+
+        .info-purple p {
+            background-color: white;
+            padding: 40px;
+        }
+
+        .info-green p {
+            background-color: white;
+            padding: 40px;
+        }
+
+
+
+        .info-blue h1 {
+            color: rgb(6, 53, 85);
+        }
+
+        .info-blue {
+            background-color: rgb(199, 232, 245);
+        }
+
+        .info-purple h1 {
+            color: rgb(105, 4, 83);
+        }
+
+        .info-purple {
+            background-color: rgb(241, 192, 241);
+        }
+
+        .info-green h1 {
+            color: green
+        }
+
+        .info-green {
+            background-color: rgb(226, 243, 201);
+        }
+
+
+
+        footer {
+            text-align: center;
+            padding-block: 1rem;
+            background-color: black;
+            color: white
+        }
+
+        /* responsive */
+
+        @media (max-width: 900px) {
+            .info-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .info-grid {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                gap: 1.5rem;
+                text-align: center;
+            }
+
+            .header {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                gap: 1.5rem;
+                text-align: center;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div class="brand">
+            <div>
+                <h2>SE066 Learning Hub</h2>
+            </div>
+        </div>
+        <div class="main-nav">
+            <ul class="nav-list">
+                <li><a href="#main">หน้าแรก</a></li>
+                <li><a href="#class">หลักสูตร</a></li>
+                <li><a href="#contact">ติดต่อเรา</a></li>
+            </ul>
+        </div>
+    </header>
+    <main class="main-layout" id="main">
+        <section class="hero">
+            <div class="hero-text">
+                <h1>เริ่มต้นสร้างเว็บไซต์<br>ในแบบของคุณ</h1>
+                <p>เรียนรู้การออกแบบและพัฒนาเว็บไซต์ผ่านการลงมอทําพร้อมพัทฒนาทักษะที่
+                    <br>ใช้ต่อยอดของโครงงานคุณ
+                </p>
+                <a href="test.html" class="back-btn">ดูหลักสูตรทั้งหมด</a>
+            </div>
+        </section>
+        </section>
+    </main>
+    <section class="info-section" id="class">
+
+        <h2 class="info-title">หลักสูตรแนะนํา</h2>
+
+        <div class="info-grid">
+            <article class="info-blue">
+                <h1>&lt;HTML&gt;</h1>
+                <p>
+                    <HTML>HTML for Beginners
+
+                    </HTML>
+                </p>
+            </article>
+            <article class="info-purple">
+                <h1>{ CSS }</h1>
+                <p>Responsive Web DEsign</p>
+            </article>
+            <article class="info-green">
+                <h1> UI / UX </h1>
+                <p>UI Design</p>
+            </article>
+        </div>
+    </section>
+</body>
+
+<footer>
+    <p class="foot" id="contact">&copy; ภัชพล แร่เขียว</p>
+</footer>
+
+
+
+</html>
